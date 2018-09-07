@@ -228,10 +228,33 @@ public class Poker
     	  
     	  Collections.sort(cardRanks);
     	  
+    	  boolean failedWithAcesHigh = false;
+    	  
     	  for (int i = 0; i < cardRanks.size() -1; i++) {
     		  if (cardRanks.get(i) + 1 != cardRanks.get(i +1)) {
-    			  return false;
+    			  failedWithAcesHigh = true;
+    			  break;
     		  }
+    	  }
+    	  
+    	  if (failedWithAcesHigh) {
+    		  for (Card card : cards) {
+    			  if (card.canCardNumberBeLow()) {
+    				  card.setNumber(1);
+    			  }
+    		  }
+    		  
+    		  cardRanks = cards.stream()
+        			  .map(card -> card.getNumber())
+        			  .collect(Collectors.toList());
+    		  
+    		  Collections.sort(cardRanks);
+    		  
+    		  for (int i = 0; i < cardRanks.size() -1; i++) {
+        		  if (cardRanks.get(i) + 1 != cardRanks.get(i +1)) {
+        			  return false;
+        		  }
+        	  }
     	  }
     	  
     	  return true;
