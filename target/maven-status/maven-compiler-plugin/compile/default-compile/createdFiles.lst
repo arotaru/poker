@@ -1,0 +1,13 @@
+hand/UselessHand.class
+hand/Straight.class
+card/Card.class
+hand/OnePair.class
+hand/ThreeOfAKind.class
+test/poker/Poker$PokerHand.class
+hand/TwoPair.class
+hand/Flush.class
+test/poker/Poker.class
+hand/StraightFlush.class
+hand/FourOfAKind.class
+hand/Hand.class
+hand/FullHouse.class
