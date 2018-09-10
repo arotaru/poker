@@ -1,6 +1,6 @@
 package hand;
 
-public class Flush extends Hand {
+public class Flush implements Hand {
 	
 	private final int rank = 4;
 	

@@ -1,6 +1,6 @@
 package hand;
 
-public class StraightFlush extends Hand {
+public class StraightFlush implements Hand {
 
 	private final int rank = 1;
 	

@@ -1,11 +1,7 @@
 package hand;
 
-public abstract class Hand {
+public interface Hand {
 
-	private int rank;
-
-	public int getRank() {
-		return rank;
-	}
+	public int getRank();
 	
 }

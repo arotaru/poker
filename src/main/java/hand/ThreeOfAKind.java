@@ -1,6 +1,6 @@
 package hand;
 
-public class ThreeOfAKind extends Hand {
+public class ThreeOfAKind implements Hand {
 
 	private final int rank = 6;
 	
